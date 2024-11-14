@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Assignment</title>
+</head>
+<body>
+  <!-- 1. Multiplication function with pass-by-value -->
+  <script>
+    function calculate(a, b) {
+      console.log("Multiplication Result:", a * b);
+    }
+    calculate(10, 20);
+  </script>
+
+  <!-- 2. Array creation using new Array() -->
+  <script>
+    let array = new Array("apple", "banana", "cherry");
+    console.log("Array:", array);
+  </script>
+
+  <!-- 3. Custom object creation -->
+  <script>
+    let person = {name: "John", age: 25, location: "New York"};
+    console.log("Person Object:", person);
+  </script>
+
+  <!-- 4. Change background color on button click -->
+  <button onclick="document.body.style.backgroundColor = 'lightblue'">Change Background</button>
+
+  <!-- 5. Get mouse coordinates on mousemove -->
+  <p id="coords"></p>
+  <script>
+    document.addEventListener("mousemove", function(event) {
+      document.getElementById("coords").textContent = `X: ${event.clientX}, Y: ${event.clientY}`;
+    });
+  </script>
+
+  <!-- 6. Display uppercase and lowercase on keyup -->
+  <input type="text" onkeyup="showText(this.value)">
+  <p id="para1"></p>
+  <p id="para2"></p>
+  <script>
+    function showText(text) {
+      document.getElementById("para1").textContent = text.toUpperCase();
+      document.getElementById("para2").textContent = text.toLowerCase();
+    }
+  </script>
+
+  <!-- 7. Background color change on mouse events -->
+  <p id="hoverPara" onmouseover="this.style.backgroundColor='grey'" onmouseout="this.style.backgroundColor='lightgrey'">
+    Hover over this text.
+  </p>
+
+  <!-- 8. Anonymous function on blur and focus events -->
+  <input type="text" onblur="calculate()" onfocus="calculate()">
+  <script>
+    const calculate = function() {
+      console.log("Anonymous function called.");
+    };
+  </script>
+
+  <!-- 9. Variable creation and logging -->
+  <script>
+    let userName = "Ajay";
+    console.log("Username:", userName);
+  </script>
+
+  <!-- 10. Sum of two numbers -->
+  <script>
+    let x = 10;
+    let y = 20;
+    let sum = x + y;
+    console.log("Sum:", sum);
+  </script>
+
+  <!-- 11. Display sum in alert -->
+  <script>
+    let num1 = 15;
+    let num2 = 20;
+    alert("Sum is: " + (num1 + num2));
+  </script>
+
+  <!-- 12. Get value from prompt -->
+  <script>
+    let promptValue = prompt("Enter something:");
+    console.log("Prompt Value:", promptValue);
+  </script>
+
+  <!-- 13. Multiply and display result -->
+  <script>
+    let data1 = 100;
+    let data2 = 200;
+    let answer = data1 * data2;
+    document.write("Multiplication Result: " + answer);
+  </script>
+
+  <!-- 14. String concatenation -->
+  <script>
+    let dataA = "ajay";
+    let dataB = "vijay";
+    console.log("Concatenated String:", dataA + dataB);
+  </script>
+
+  <!-- 15. Data type checking -->
+  <script>
+    let data = 10.90;
+    console.log("Data Type:", typeof data);
+  </script>
+
+  <!-- 16. Multiplication in alert box -->
+  <script>
+    let numA = 10;
+    let numB = 20;
+    alert("Multiplication Result: " + (numA * numB));
+  </script>
+
+  <!-- 17. Division using write() -->
+  <script>
+    let valA = 10;
+    let valB = 20;
+    document.write("Division Result: " + (valA / valB));
+  </script>
+
+  <!-- 18. Modulus operation -->
+  <script>
+    let modData = 10;
+    console.log("Remainder:", modData % 3);
+  </script>
+
+  <!-- 19. Function call on button click -->
+  <button onclick="myfunc()">Click Me</button>
+  <script>
+    function myfunc() {
+      console.log("Button clicked!");
+    }
+  </script>
+
+  <!-- 20. Keyup event function call -->
+  <input type="text" onkeyup="myfunc()">
+
+  <!-- 21. Resize event function call -->
+  <script>
+    window.onresize = function() {
+      console.log("Window resized.");
+    };
+  </script>
+
+  <!-- 22. Multiplication on button click -->
+  <button onclick="calculateProduct(10, 20)">Calculate Product</button>
+  <script>
+    function calculateProduct(a, b) {
+      console.log("Product:", a * b);
+    }
+  </script>
+
+  <!-- 23. Change paragraph content on button click -->
+  <p id="para">This is a paragraph.</p>
+  <button onclick="document.querySelector('#para').innerHTML = 'Content Changed!'">Change Content</button>
+
+  <!-- 24. Change background on double-click -->
+  <p id="dblPara" ondblclick="this.style.backgroundColor='grey'">Double-click to change background.</p>
+
+  <!-- 25. Change paragraph content on mouseover -->
+  <p id="mouseoverPara" onmouseover="this.innerHTML='Content Changed on Hover!'">Hover over me.</p>
+
+  <!-- 26. Hover color change -->
+  <p id="hoverChange" onmouseover="this.style.color='grey'" onmouseout="this.style.color='blue'">Hover to change color.</p>
+
+  <!-- 27. For loop with line break -->
+  <script>
+    for (let i = 1; i <= 5; i++) {
+      document.write(i + "<br>");
+    }
+  </script>
+
+  <!-- 28. Even numbers with while loop -->
+  <script>
+    let i = 1;
+    while (i <= 10) {
+      if (i % 2 === 0) console.log(i);
+      i++;
+    }
+  </script>
+
+  <!-- 29. Even or odd check -->
+  <script>
+    let num = 7;
+    console.log(num % 2 === 0 ? "Even" : "Odd");
+  </script>
+
+  <!-- 30. Get textbox value -->
+  <input type="text" id="txt">
+  <button onclick="console.log(document.getElementById('txt').value)">Show Value</button>
+
+  <!-- 31. Sum values from two textboxes -->
+  <input type="text" id="txt1">
+  <input type="text" id="txt2">
+  <button onclick="sumValues()">Show Sum</button>
+  <p id="paraSum"></p>
+  <script>
+    function sumValues() {
+      let data1 = parseFloat(document.getElementById("txt1").value);
+      let data2 = parseFloat(document.getElementById("txt2").value);
+      document.getElementById("paraSum").textContent = data1 + data2;
+    }
+  </script>
+
+  <!-- 32. Check if value is a number -->
+  <script>
+    function checkType() {
+      let txtValue = document.getElementById("txt").value;
+      console.log(isNaN(txtValue) ? "String" : "Number");
+    }
+  </script>
+
+  <!-- 33. Red border if textbox is empty -->
+  <input type="text" id="txt" onblur="checkEmpty()">
+  <script>
+    function checkEmpty() {
+      let textbox = document.getElementById("txt");
+      if (textbox.value === "") {
+        textbox.style.border = "2px solid red";
+      }
+    }
+  </script>
+
+  <!-- 34. Check if input is a string -->
+  <input type="text" id="txt" onblur="validateNumber()">
+  <p id="error"></p>
+  <script>
+    function validateNumber() {
+      let value = document.getElementById("txt").value;
+      if (isNaN(value)) {
+        document.getElementById("error").textContent = "Only numbers are required.";
+      }
+    }
+  </script>
+</body>
+</html>
